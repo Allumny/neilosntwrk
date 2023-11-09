@@ -1,0 +1,75 @@
+--PT-BR--
+
+O seguite guia aborda os padrões para toda a rede para a implantação dos seguintes sistemas operacionais:
+
+- Linux= Debian ou RHEL (Ex. Fedora) (clientes e servidores)
+- UNIX= FreeBSD
+- Windows= 10/11 e server 2022 (favor não utilizar windows em servidores, somente em extrema necessidade)
+
+Usuário padrão: administrator (caso linux/unix: NÃO ADICIONAR AO WHEEL, tarefas que requerem permissão serão realizadas pelo SU [root])
+
+faixa de IP específica de cada site:
+
+	BR01-WS - 8.0.0.0/24 (255.255.255.0) dns 8.0.0.1 domínio neilos.io
+	BR01-WS - 8.0.2.0/26 (255.255.255.192) dns 8.0.2.1 domínio neilos.io (somente servidores e ip's fixos)
+	BR02-DAN - 8.0.1.0/24 (255.255.255.0) dns 8.0.1.1 domínio neilos.io
+	BR03-GSRIO - 8.0.3.0/24 (255.255.255.0) dns 8.0.3.1 domínio neilos.io
+	
+LINUX (Servidores):
+
+- instalar cockpit
+- Instalar o cliente SMB cifs-utils
+- Instalar o Xen Guest Tools (caso seja virtualizado)
+- definir ip fixo.
+
+LINUX (Clientes):
+
+- Instalar o cliente SMB cifs-utils
+- Instalar Wireguard (caso seja notebook)
+
+UNIX:
+
+ainda em desenvolvimento...
+
+Windows (clientes):
+
+- instalar o Chocolatey
+Estamos criando um instalador baseado no chocolatey para realizar a instalação dos programas padrão automaticamente.
+
+--EN--
+
+The following guide covers network-wide standards for deploying the following operating systems:
+
+- Linux= Debian or RHEL (Ex. Fedora) (clients and servers)
+- UNIX= FreeBSD
+- Windows= 10/11 and server 2022 (please do not use Windows on servers, only if absolutely necessary)
+
+Default user: administrator (linux/unix case: DO NOT ADD TO WHEEL, tasks that require permission will be performed by SU [root])
+
+Specific IP range for each site:
+
+BR01-WS - 8.0.0.0/24 (255.255.255.0) dns 8.0.0.1 neilos.io domain
+BR01-WS - 8.0.2.0/26 (255.255.255.192) dns 8.0.2.1 neilos.io domain (only servers and fixed IPs)
+BR02-DAN - 8.0.1.0/24 (255.255.255.0) dns 8.0.1.1 neilos.io domain
+BR03-GSRIO - 8.0.3.0/24 (255.255.255.0) dns 8.0.3.1 domain neilos.io
+
+LINUX (Servers):
+
+- install cockpit
+- Install the cifs-utils SMB client
+- Install Xen Guest Tools (if virtualized)
+- set fixed ip.
+
+LINUX (Clients):
+
+- Install the cifs-utils SMB client
+- Install Wireguard (if it is a notebook)
+
+UNIX:
+
+still in development...
+
+Windows (clients):
+
+- install Chocolatey
+We are creating an installer based on chocolatey to install default programs automatically.
