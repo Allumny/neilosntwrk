@@ -30,6 +30,8 @@ Números serão utilizados quando houver mais de um equipamento, ex.:
 
 numa localidade, existem dois DR's redundantes, logo teremos DR-01 e DR-02
 
+numa pool de virtualização, temos dois nós de produção, logo teremos [ID do local].xcp-prod01.[domínio] e [ID do local].xcp-prod02.[domínio]
+
 o código de implantação pode receber os seguintes valores:
 
 PROD - ambiente em produção 
@@ -76,6 +78,8 @@ Numbering/deployment:
 Numbers will be used when there is more than one piece of equipment, e.g.:
 
 In a location, there are two redundant DR's, so we will have DR-01 and DR-02
+
+In a virtualization pool, we have two production nodes, so we'll have [site ID].xcp-prod01.[domain] and [site ID].xcp-prod02.[domain]
 
 the deployment code can receive the following values:
 
