@@ -2,7 +2,7 @@
 
 Utilizaremos a seguinte estrutura na nomeação via DNS:
 
-[ID do Local].[tipo]-[numeração/implantação].[domínio]
+[ID do Local].[tipo]-[numeração/implantação]-[(opcional)ID do IPMI].[domínio]
 
 ID do local:
 
@@ -39,11 +39,17 @@ TEST - teste de servidor ou equipamento
 K8S - utilizado quando há uma pool de contêineres (kubernetes)
 EXT - equipamento ou servidor não pertencente a rede.
 
+Identificador IPMI:
+
+Quando o registro DNS aponta pra uma interface IPMI (iDRAC, iLO, etc.), utilizaremos o seguinte identificador:
+
+MGMT - Gerenciamento
+
 --EN--
 
 We will use the following structure when naming via DNS:
 
-[Site ID].[type]-[numbering/deployment].[domain]
+[Site ID].[type]-[numbering/deployment]-[(optional)IPMI ID].[domain]
 
 Location ID:
 
@@ -79,3 +85,9 @@ POOL - used when there is a virtualization pool
 TEST - server or equipment testing
 K8S - used when there is a pool of containers (kubernetes)
 EXT - equipment or server not belonging to the network.
+
+IPMI Identifier:
+
+When the DNS entry points at a IPMI management interface (like iDRAC, iLO and etc.), we'll use the following value:
+
+MGMT - Management
